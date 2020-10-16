@@ -2,6 +2,8 @@
 
 namespace Knpire.Object
 {
+    using Game;
+
     public class BulletBehaviour : MonoBehaviour
     {
         [SerializeField]
@@ -9,8 +11,8 @@ namespace Knpire.Object
         private GameObject explosion;
 
         [SerializeField]
-        [Header("Explosion sound to play when collide")]
-        private AudioClip explosionSound;
+        [Header("The explosion sound")]
+        private AudioClip explosionClip;
 
         private void Start()
         {
@@ -25,8 +27,11 @@ namespace Knpire.Object
         private void Explode()
         {
             GameObject explosionParticle = Instantiate(this.explosion, this.transform.position, Quaternion.identity);
+
             explosionParticle.GetComponent<ParticleSystem>().Play();
-            this.GetComponent<AudioSource>().PlayOneShot(this.explosionSound);
+
+            GameManager.Instance.GetSoundManager().PlaySound(this.explosionClip);
+
             Destroy(this.gameObject);
         }
     }

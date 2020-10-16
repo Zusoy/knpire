@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844c0907614125ef7a26443c2d90bb19, type: 3}
+  m_Name: Nusbom
+  m_EditorClassIdentifier: 
+  Face: {fileID: 2800000, guid: 4fc2368041fc189a283b97b8da313240, type: 3}
+  Quote: {fileID: 8300000, guid: 4f6ec2bd3611f9fbc884c5d172de7cca, type: 3}

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace Knpire.Enemy.Settings.Sections
 {
@@ -19,5 +20,8 @@ namespace Knpire.Enemy.Settings.Sections
 
         [Header("Time to wait beetween each spawn of enemy")]
         public float EnemySpawnDelay;
+
+        [Header("KNPire Models")]
+        public List<KnpireModel> KnpireModels = new List<KnpireModel>();
     }
 }

@@ -18,5 +18,19 @@ MonoBehaviour:
     NextWaveEnemyAddition: 5
     WaveCooldown: 5
     EnemySpawnDelay: 1
+    KnpireModels:
+    - {fileID: 11400000, guid: cdf0d8c9319b8c457b81bc60b64827dd, type: 2}
+    - {fileID: 11400000, guid: a379cd5198b1796ed84333ab6c873063, type: 2}
+    - {fileID: 11400000, guid: f599925f815af266f90fa8743a09f63f, type: 2}
+    - {fileID: 11400000, guid: a0845980ca1dc108ea265dd3faec576e, type: 2}
+    - {fileID: 11400000, guid: ea9a10719b450374c94a94cf0de48c6f, type: 2}
+    - {fileID: 11400000, guid: 411bcfdfacb363383ad658d868f0dbb0, type: 2}
+    - {fileID: 11400000, guid: e8f83805ff8485a4cb45be9b40661a1a, type: 2}
+    - {fileID: 11400000, guid: 5689f2a865bedad00891da946336b5b8, type: 2}
+    - {fileID: 11400000, guid: 8bcd168136f985089a3f573f7af8d4f9, type: 2}
+    - {fileID: 11400000, guid: 799454b94c799c989b917e442a7f10ba, type: 2}
+    - {fileID: 11400000, guid: 4a63b670576ba7200bfd5c74eaac4801, type: 2}
+    - {fileID: 11400000, guid: 84a864ccf669bdad5921b3a291a8ba87, type: 2}
+    - {fileID: 11400000, guid: be57f6e792b8cfe31836bff1520d6f8f, type: 2}
   Enemy:
     MoveSpeed: 15

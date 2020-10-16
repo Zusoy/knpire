@@ -11,6 +11,8 @@ namespace Knpire.Game
 
         private EnemySpawner EnemySpawner;
 
+        private SoundManager SoundManager;
+
         [SerializeField]
         private WaveCounter WaveCounterUI;
 
@@ -34,11 +36,11 @@ namespace Knpire.Game
         private void Start()
         {
             this.EnemySpawner = this.GetComponent<EnemySpawner>();
+            this.SoundManager = this.GetComponent<SoundManager>();
         }
 
         public void OnPlayerDeath()
         {
-            Debug.Log("Player Death!!");
             this.PlayerDead = true;
         }
 
@@ -62,6 +64,11 @@ namespace Knpire.Game
         public bool IsPlayerDead()
         {
             return this.PlayerDead;
+        }
+
+        public SoundManager GetSoundManager()
+        {
+            return this.SoundManager;
         }
 
         public void OnEnemyKilled()

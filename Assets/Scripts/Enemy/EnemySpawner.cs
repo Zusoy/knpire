@@ -67,10 +67,18 @@ namespace Knpire.Enemy
         private GameObject SpawnEnemyAtRandomPoint()
         {
             int index = Random.Range(1, this.spawnPoints.Count);
+            int knpireIndex = Random.Range(0, this.settings.Spawn.KnpireModels.Count);
+
             Transform spawn = this.spawnPoints[index];
+            KnpireModel knpire = this.settings.Spawn.KnpireModels[knpireIndex];
 
             Vector3 spawnPos = new Vector3(spawn.position.x, 5f, spawn.position.z);
             GameObject enemy = Instantiate(this.settings.Spawn.Enemy, spawnPos, Quaternion.identity);
+            Renderer rendering = enemy.GetComponent<Renderer>();
+
+            rendering.material.mainTexture = knpire.Face;
+
+            GameManager.Instance.GetSoundManager().PlaySound(knpire.Quote);
 
             return enemy;
         }

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844c0907614125ef7a26443c2d90bb19, type: 3}
+  m_Name: Sophie
+  m_EditorClassIdentifier: 
+  Face: {fileID: 2800000, guid: f7e3bbae02cb29b51be1b2afaf75e18c, type: 3}
+  Quote: {fileID: 8300000, guid: d6458361c00399b13af0ba3bb721b0da, type: 3}
