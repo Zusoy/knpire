@@ -1,25 +1,32 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace Knpire.Object
 {
-    /// <summary>
-    /// Handle Bullet Time to Live
-    /// </summary>
     public class BulletBehaviour : MonoBehaviour
     {
         [SerializeField]
-        [Header("Bullet time to live (s)")]
-        private float timeToLive;
+        [Header("Explosion particle to play when collide")]
+        private GameObject explosion;
+
+        [SerializeField]
+        [Header("Explosion sound to play when collide")]
+        private AudioClip explosionSound;
 
         private void Start()
         {
-            this.StartCoroutine("WaitForDestroy");
+            Physics.IgnoreLayerCollision(0, 8);
         }
 
-        private IEnumerator WaitForDestroy()
+        private void OnCollisionEnter(Collision other)
         {
-            yield return new WaitForSeconds(this.timeToLive);
+            this.Explode();
+        }
+
+        private void Explode()
+        {
+            GameObject explosionParticle = Instantiate(this.explosion, this.transform.position, Quaternion.identity);
+            explosionParticle.GetComponent<ParticleSystem>().Play();
+            this.GetComponent<AudioSource>().PlayOneShot(this.explosionSound);
             Destroy(this.gameObject);
         }
     }
