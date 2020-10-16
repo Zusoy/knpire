@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9b6bb1ba8ab58a0dc37825802352, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  Movement:
+    MoveSpeed: 12
+    RotateSpeed: 100
+  Shooting:
+    Bullet: {fileID: 3334338916492758853, guid: 045a96b74dce3d62e98039ca20b26b33,
+      type: 3}
+    TurretStrength: 35000

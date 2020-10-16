@@ -2,23 +2,20 @@
 
 namespace Knpire.Player
 {
+    using Common;
+    using Settings;
+
     /// <summary>
     /// Handle Player Movements
     /// </summary>
-    public class PlayerMovementBehaviour : MonoBehaviour
+    public class PlayerMovementBehaviour : ConfigurableMonoBehaviour<PlayerSetting>
     {
-        [SerializeField]
-        private float moveSpeed;
-
-        [SerializeField]
-        private float rotateSpeed;
-
         private void Update()
         {
             Vector2 input = new Vector2(Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"));
 
-            float movement = input.x * this.moveSpeed * Time.deltaTime;
-            float rotation = input.y * this.rotateSpeed * Time.deltaTime;
+            float movement = input.x * this.settings.Movement.MoveSpeed * Time.deltaTime;
+            float rotation = input.y * this.settings.Movement.RotateSpeed * Time.deltaTime;
 
             this.transform.Translate(Vector3.forward * movement);
             this.transform.Rotate(Vector3.up * rotation);
