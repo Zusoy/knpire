@@ -17,7 +17,7 @@ MonoBehaviour:
     StartEnemyCount: 5
     NextWaveEnemyAddition: 5
     WaveCooldown: 5
-    EnemySpawnDelay: 1
+    EnemySpawnDelay: 0.7
     KnpireModels:
     - {fileID: 11400000, guid: cdf0d8c9319b8c457b81bc60b64827dd, type: 2}
     - {fileID: 11400000, guid: a379cd5198b1796ed84333ab6c873063, type: 2}
@@ -33,4 +33,4 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 84a864ccf669bdad5921b3a291a8ba87, type: 2}
     - {fileID: 11400000, guid: be57f6e792b8cfe31836bff1520d6f8f, type: 2}
   Enemy:
-    MoveSpeed: 15
+    MoveSpeed: 20
