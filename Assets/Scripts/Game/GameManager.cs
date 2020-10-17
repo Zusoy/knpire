@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Knpire.Game
 {
@@ -15,6 +16,9 @@ namespace Knpire.Game
 
         [SerializeField]
         private WaveCounter WaveCounterUI;
+
+        [SerializeField]
+        private GameOverPanel GameOverPanel;
 
         public static GameManager Instance
         {
@@ -35,13 +39,24 @@ namespace Knpire.Game
 
         private void Start()
         {
+            this.GameOverPanel.gameObject.SetActive(false);
+
             this.EnemySpawner = this.GetComponent<EnemySpawner>();
             this.SoundManager = this.GetComponent<SoundManager>();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
 
         public void OnPlayerDeath()
         {
             this.PlayerDead = true;
+            this.GameOverPanel.gameObject.SetActive(true);
         }
 
         public void NextWave()
@@ -69,6 +84,11 @@ namespace Knpire.Game
         public SoundManager GetSoundManager()
         {
             return this.SoundManager;
+        }
+
+        public void RestartGame()
+        {
+            SceneManager.LoadScene(0);
         }
 
         public void OnEnemyKilled()
